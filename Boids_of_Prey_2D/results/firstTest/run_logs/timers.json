@@ -1,0 +1,47 @@
+{
+    "name": "root",
+    "metadata": {
+        "timer_format_version": "0.1.0",
+        "start_time_seconds": "1615776702",
+        "python_version": "3.9.2 (tags/v3.9.2:1a79785, Feb 19 2021, 13:44:55) [MSC v.1928 64 bit (AMD64)]",
+        "command_line_arguments": "E:\\uni_work\\Year 3 Term 2\\MAT301\\repos\\Boids-of-Prey-2D\\Boids_of_Prey_2D\\venv\\Scripts\\mlagents-learn --run-id=firstTest",
+        "mlagents_version": "0.24.1",
+        "mlagents_envs_version": "0.24.1",
+        "communication_protocol_version": "1.4.0",
+        "pytorch_version": "1.7.1+cu110",
+        "numpy_version": "1.20.1",
+        "end_time_seconds": "1615776742"
+    },
+    "total": 39.426692800000005,
+    "count": 1,
+    "self": 0.0054044000000033066,
+    "children": {
+        "run_training.setup": {
+            "total": 0.20310319999999993,
+            "count": 1,
+            "self": 0.20310319999999993
+        },
+        "TrainerController.start_learning": {
+            "total": 39.2181852,
+            "count": 1,
+            "self": 0.0002959999999987417,
+            "children": {
+                "TrainerController._reset_env": {
+                    "total": 39.2175064,
+                    "count": 1,
+                    "self": 39.2175064
+                },
+                "trainer_threads": {
+                    "total": 8.000000022434506e-07,
+                    "count": 1,
+                    "self": 8.000000022434506e-07
+                },
+                "TrainerController._save_models": {
+                    "total": 0.00038200000000188084,
+                    "count": 1,
+                    "self": 0.00038200000000188084
+                }
+            }
+        }
+    }
+}

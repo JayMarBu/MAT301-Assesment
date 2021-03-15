@@ -10,13 +10,10 @@ public class RewardSpawner : MonoBehaviour
     private Bounds spawningBounds;
     private SpriteRenderer spawningBoundsSprite;
 
-    public Transform Reward
-    {
-        get
-        {
-            return reward;
-        }
-    }
+    [SerializeField] private float rewardSize = 1;
+
+    public Transform Reward { get { return reward;}}
+    public float RewardSize { get { return rewardSize; } set { rewardSize = value; } }
 
 
     private void Awake()
@@ -41,6 +38,7 @@ public class RewardSpawner : MonoBehaviour
         y_local = Mathf.Lerp(spawningBounds.max.y, spawningBounds.min.y, y_local);
 
         reward.position = new Vector3(x_local, y_local, reward.position.z);
+        reward.localScale = Vector3.one * rewardSize;
     }
 
     private void Update()

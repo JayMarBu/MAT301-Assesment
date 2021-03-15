@@ -1,0 +1,23 @@
+{
+    "BoidofPrey": {
+        "checkpoints": [
+            {
+                "steps": 8695,
+                "file_path": "results\\firstTest7\\BoidofPrey\\BoidofPrey-8695.onnx",
+                "reward": -6.011815524468055,
+                "creation_time": 1615777913.2743273
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 8695,
+            "file_path": "results\\firstTest7\\BoidofPrey.onnx",
+            "reward": -6.011815524468055,
+            "creation_time": 1615777913.2743273
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.2.0",
+        "mlagents_version": "0.24.1",
+        "torch_version": "1.7.1+cu110"
+    }
+}

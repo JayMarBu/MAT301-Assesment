@@ -9,17 +9,20 @@ public class BoidController : MonoBehaviour
     private float thrust;
     private float rotation;
 
-    [Header("Boid Variables")]
-    [SerializeField] private float thrustMultiplier;
-    [SerializeField] private float rotationMultiplier;
-    [SerializeField] private float maxSpeed;
-    [SerializeField] private float tiltCoefficient;
+    [HideInInspector] public float thrustMultiplier;
+    [HideInInspector] public float rotationMultiplier;
+    [HideInInspector] public float maxSpeed;
+    [HideInInspector] public float tiltCoefficient;
 
     [Header("Debug Render Info")]
     [SerializeField] private TMPro.TextMeshPro[] UIInfo;
 
     [Header("Dependencies")]
     [SerializeField] RewardSpawner rewardSpawner;
+
+    public float Thrust { set { thrust = value; } get { return thrust; } }
+    public float Rotation { set { rotation = value; } get { return rotation; } }
+
 
     private void Awake()
     {
@@ -49,7 +52,7 @@ public class BoidController : MonoBehaviour
         UIInfo[3].text = "x: " + rb.velocity.x;
         UIInfo[4].text = "y: " + rb.velocity.y;
 
-        GetInputs();
+        //GetInputs();
     }
 
     private void FixedUpdate()
