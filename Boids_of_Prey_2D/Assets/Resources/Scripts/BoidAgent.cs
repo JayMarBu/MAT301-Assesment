@@ -54,30 +54,31 @@ public class BoidAgent : Agent
         bool rkey = Keyboard.current.dKey.isPressed; // +
         bool tkey = Keyboard.current.spaceKey.isPressed;
 
-        continuousActions[0] = (float)(Convert.ToInt32(tkey));
-        continuousActions[1] = (float)(Convert.ToInt32(lkey) - Convert.ToInt32(rkey));
+        //continuousActions[0] = (float)(Convert.ToInt32(tkey));
+        continuousActions[0] = (float)(Convert.ToInt32(lkey) - Convert.ToInt32(rkey));
     }
 
     public override void OnActionReceived(ActionBuffers actions)
     {
-        float thrust = (actions.ContinuousActions[0]/2)+0.5f;
-        float rotation = actions.ContinuousActions[1];
+        float rotation = actions.ContinuousActions[0];
 
-        float tilt = (transform.up.y / 2) + 0.5f;
-        //rb.gravityScale = (tilt*tiltCoefficient)+(1-tiltCoefficient);
-        //rb.gravityScale = 1 - (tilt * tiltCoefficient);
-        rb.gravityScale = 0;
+        float thrustForce = 1f;
+        rb.AddForce(transform.up * thrustForce * thrustMultiplierBase);
 
-        float thrustForce = (thrust*0.8f)+0.2f;
-        thrustMultiplier = thrustMultiplierBase * thrust;
-        rb.AddForce(transform.up * thrustForce * thrustMultiplier);
-        rb.AddTorque(rotation * rotationMultiplier);
+        rb.rotation += rotation * rotationMultiplier * 100 * Time.deltaTime;
 
         if (rb.velocity.magnitude > maxSpeed)
         {
             rb.velocity = rb.velocity.normalized * maxSpeed;
         }
 
+        GrantRewards();
+
+        UpdateUi(thrustForce, rotation);
+    }
+
+    public void GrantRewards()
+    {
         Vector3 targetDir = (rewardSpawner.Reward.transform.position - transform.position).normalized;
 
         if (Mathf.Sign(targetDir.x) == Mathf.Sign(transform.up.x) && Mathf.Sign(targetDir.y) == Mathf.Sign(transform.up.y))
@@ -90,8 +91,6 @@ public class BoidAgent : Agent
             directionGizmoColor = Color.red;
             AddReward(-0.1f);
         }
-
-        UpdateUi(thrustForce, rotation);
     }
 
     public void UpdateUi(float thrust, float rotation)
