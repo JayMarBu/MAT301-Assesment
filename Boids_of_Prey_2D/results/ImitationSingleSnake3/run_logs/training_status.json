@@ -1,0 +1,29 @@
+{
+    "BoidofPrey": {
+        "checkpoints": [
+            {
+                "steps": 499877,
+                "file_path": "results\\ImitationSingleSnake3\\BoidofPrey\\BoidofPrey-499877.onnx",
+                "reward": null,
+                "creation_time": 1616698321.1298513
+            },
+            {
+                "steps": 518918,
+                "file_path": "results\\ImitationSingleSnake3\\BoidofPrey\\BoidofPrey-518918.onnx",
+                "reward": null,
+                "creation_time": 1616698356.3156173
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 518918,
+            "file_path": "results\\ImitationSingleSnake3\\BoidofPrey.onnx",
+            "reward": null,
+            "creation_time": 1616698356.3156173
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.2.0",
+        "mlagents_version": "0.24.1",
+        "torch_version": "1.7.1+cu110"
+    }
+}

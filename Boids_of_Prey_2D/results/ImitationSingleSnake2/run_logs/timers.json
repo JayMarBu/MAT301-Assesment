@@ -1,0 +1,63 @@
+{
+    "name": "root",
+    "metadata": {
+        "timer_format_version": "0.1.0",
+        "start_time_seconds": "1616697211",
+        "python_version": "3.9.2 (tags/v3.9.2:1a79785, Feb 19 2021, 13:44:55) [MSC v.1928 64 bit (AMD64)]",
+        "command_line_arguments": "E:\\uni_work\\Year 3 Term 2\\MAT301\\repos\\Boids-of-Prey-2D\\Boids_of_Prey_2D\\venv\\Scripts\\mlagents-learn config/ppo/BoidOfPrey.yaml --run-id=ImitationSingleSnake2",
+        "mlagents_version": "0.24.1",
+        "mlagents_envs_version": "0.24.1",
+        "communication_protocol_version": "1.4.0",
+        "pytorch_version": "1.7.1+cu110",
+        "numpy_version": "1.20.1",
+        "end_time_seconds": "1616697236"
+    },
+    "total": 24.9730996,
+    "count": 1,
+    "self": 0.027353900000001374,
+    "children": {
+        "run_training.setup": {
+            "total": 0.09321430000000008,
+            "count": 1,
+            "self": 0.09321430000000008
+        },
+        "TrainerController.start_learning": {
+            "total": 24.8525314,
+            "count": 1,
+            "self": 8.079999999921483e-05,
+            "children": {
+                "TrainerController._reset_env": {
+                    "total": 24.8502553,
+                    "count": 1,
+                    "self": 24.850026900000003,
+                    "children": {
+                        "demo_to_buffer": {
+                            "total": 0.00022839999999746396,
+                            "count": 1,
+                            "self": 2.49999999972772e-05,
+                            "children": {
+                                "load_demonstration": {
+                                    "total": 0.00020340000000018676,
+                                    "count": 1,
+                                    "self": 0.00020340000000018676
+                                }
+                            }
+                        }
+                    }
+                },
+                "TrainerController._save_models": {
+                    "total": 0.002195300000000344,
+                    "count": 1,
+                    "self": 0.0007364999999985855,
+                    "children": {
+                        "RLTrainer._checkpoint": {
+                            "total": 0.0014588000000017587,
+                            "count": 1,
+                            "self": 0.0014588000000017587
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,35 @@
+{
+    "BoidofPrey": {
+        "checkpoints": [
+            {
+                "steps": 499952,
+                "file_path": "results\\BoidofPreyVS\\BoidofPrey\\BoidofPrey-499952.onnx",
+                "reward": null,
+                "creation_time": 1616523642.4232612
+            },
+            {
+                "steps": 999954,
+                "file_path": "results\\BoidofPreyVS\\BoidofPrey\\BoidofPrey-999954.onnx",
+                "reward": -5.097048203150432,
+                "creation_time": 1616524368.818284
+            },
+            {
+                "steps": 1000210,
+                "file_path": "results\\BoidofPreyVS\\BoidofPrey\\BoidofPrey-1000210.onnx",
+                "reward": -5.097048203150432,
+                "creation_time": 1616524368.9140122
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 1000210,
+            "file_path": "results\\BoidofPreyVS\\BoidofPrey.onnx",
+            "reward": -5.097048203150432,
+            "creation_time": 1616524368.9140122
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.2.0",
+        "mlagents_version": "0.24.1",
+        "torch_version": "1.7.1+cu110"
+    }
+}
